@@ -11,35 +11,57 @@
 
 <body>
     <div class="container">
-        <h1 class="title">CSS Mems Slider</h1>
-        <section class="slider">
-            <input type="radio" id="item1" name="slides" value="item1" checked>
-            <label for="item1" class="item1 dot">Slide 1</label>
-            <input type="radio" id="item2" name="slides" value="item2">
-            <label for="item2" class="item2 dot">Slide 2</label>
-            <input type="radio" id="item3" name="slides" value="item3">
-            <label for="item3" class="item3 dot">Slide 3</label>
-            <input type="radio" id="item4" name="slides" value="item4">
-            <label for="item4" class="item4 dot">Slide 4</label>
-
-            <label for="item1" class="item1 arrow">Slide 1</label>
-            <label for="item2" class="item2 arrow">Slide 2</label>
-            <label for="item3" class="item3 arrow">Slide 3</label>
-            <label for="item4" class="item4 arrow">Slide 4</label>
-
-            <label for="item1" class="item1 text">Ожидания реальность.</label>
-            <label for="item2" class="item2 text">Ты все еще думаешь что HTML это язык программирования?</label>
-            <label for="item3" class="item3 text">Держите своих собак при себе!</label>
-            <label for="item4" class="item4 text">Только если это RS School :)</label>
-
-            <ul class="slides">
-                <li class="slide item1"><img src="slider-img/img1.jpg" alt="programm mem"></li>
-                <li class="slide item2"><img src="slider-img/img2.jpg" alt="programm mem"></li>
-                <li class="slide item3"><img src="slider-img/img3.jpg" alt="programm mem"></li>
-                <li class="slide item4"><img src="slider-img/img4.jpg" alt="programm mem"></li>
-            </ul>
-        </section>
-    </div>
+    <h1 class="title">CSS Mems Slider</h1>
+    <section class="carousel" aria-label="Gallery">
+        <ol class="carousel__viewport">
+            <li id="carousel__slide1" tabindex="0" class="carousel__slide">
+                <img src="slider-img/img1.jpg" alt="programm mem">
+                <p class="text">Ожидания реальность.</p>
+                <div class="carousel__snapper">
+                    <a href="#carousel__slide4" class="carousel__prev">Go to last slide</a>
+                    <a href="#carousel__slide2" class="carousel__next">Go to next slide</a>
+                </div>
+            </li>
+            <li id="carousel__slide2" tabindex="0" class="carousel__slide">
+                <img src="slider-img/img2.jpg" alt="programm mem">
+                <p class="text">Ты все еще думаешь что HTML это язык программирования?</p>
+                <div class="carousel__snapper"></div>
+                <a href="#carousel__slide1" class="carousel__prev">Go to previous slide</a>
+                <a href="#carousel__slide3" class="carousel__next">Go to next slide</a>
+            </li>
+            <li id="carousel__slide3" tabindex="0" class="carousel__slide">
+                <img src="slider-img/img3.jpg" alt="programm mem">
+                <p class="text">Держите своих собак при себе!</p>
+                <div class="carousel__snapper"></div>
+                <a href="#carousel__slide2" class="carousel__prev">Go to previous slide</a>
+                <a href="#carousel__slide4" class="carousel__next">Go to next slide</a>
+            </li>
+            <li id="carousel__slide4" tabindex="0" class="carousel__slide">
+                <img src="slider-img/img4.jpg" alt="programm mem">
+                <p class="text">Только если это RS School :)</p>
+                <div class="carousel__snapper"></div>
+                <a href="#carousel__slide3" class="carousel__prev">Go to previous slide</a>
+                <a href="#carousel__slide1" class="carousel__next">Go to first slide</a>
+            </li>
+        </ol>
+        <div class="carousel__navigation">
+            <ol class="carousel__navigation-list">
+                <li class="carousel__navigation-item">
+                    <a href="#carousel__slide1" class="carousel__navigation-button">Go to slide 1</a>
+                </li>
+                <li class="carousel__navigation-item">
+                    <a href="#carousel__slide2" class="carousel__navigation-button">Go to slide 2</a>
+                </li>
+                <li class="carousel__navigation-item">
+                    <a href="#carousel__slide3" class="carousel__navigation-button">Go to slide 3</a>
+                </li>
+                <li class="carousel__navigation-item">
+                    <a href="#carousel__slide4" class="carousel__navigation-button">Go to slide 4</a>
+                </li>
+            </ol>
+        </div>
+    </section>
+</div>
 </body>
 
 </html>
